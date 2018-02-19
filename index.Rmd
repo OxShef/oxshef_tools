@@ -1,0 +1,45 @@
+---
+title: "OxShef: Tools"
+output:
+  html_document:
+    toc: false
+    toc_float:
+      collapsed: false
+    includes:
+      before_body: [includes/include_header.html, includes/include_header_navpage.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+
+<h2>**OxShef: Tools** provides advice on choosing data visualisations tools that [support a reproducible research workflow](choosing-a-tool.html).</h2>
+
+<center>
+
+<img src='images/rdm-for-all-outputs.png' style='max-width:600px' width='100%'></img>
+
+</center>
+
+<hr>
+
+<h2> **OxShef: Tools** maintains an overview of [popular data visualisation tools](list-of-tools.html) and dedicated websites for select technologies which fully support accessing data from DOI-issuing repositories.</h2>
+
+<center>
+
+<p>
+<img src="images/dash-logo.svg" alt="" width="22%" height="12%">&nbsp;&nbsp;
+<img src="images/jupyter-logo.png" alt="" width="12%" height="12%">&nbsp;&nbsp;
+<img src="images/shiny-logo.png" alt="" width="10%" height="10%">&nbsp;&nbsp;
+<img src="images/vega-lite-logo.png" alt="" width="22%" height="12%">
+
+</p>
+</center>
+
