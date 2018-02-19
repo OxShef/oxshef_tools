@@ -1,0 +1,74 @@
+---
+title: "OxShef: Tools"
+output:
+  html_document:
+    toc: false
+    toc_float:
+      collapsed: false
+    includes:
+      before_body: [includes/include_header.html, includes/include_header_navpage.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+# Visualisation Tools
+
+There are hundreds of visualisation tools and packages used by researchers for communicating research datasets. **OxShef: Tools** cannot hope to be a reference or a recommendation engine for all of these solutions. For a birds eye view of what tools are available you might find this resource useful: http://www.visualisingdata.com/resources/.
+
+In general, visualisation tools fall into one of two categories:
+
+- Point and Click Tools <i class='fa fa-hand-pointer'></i>: These allow users to build visualisations interactively, for instance selecting columns from a spreadsheet-like view of your data and clicking "Create BarChart". Examples of this type of tool include: **Excel**, **SPSS** and **Tableau**.
+- Scripting Tools <i class='fa fa-file-code'></i>: These require users to write code (or scripts) to generate visualisations, such tools in general have a steeper initial learning curve than "point and click tools" but allow greater overall flexibility  and extensibility. Examples of this type of tool include: **Python**, **R**.
+
+We further sub-divide tools by their ability to pull data from external sources, i.e. from a DOI-issuing data repository.
+
+```{r viz-tools-DT, echo = FALSE}
+library("tidyverse")
+library("DT")
+library("readxl")
+
+fa_scripting <- "<i class='fa fa-file-code fa-2x'></i>"
+fa_pointAndClick <- "<i class='fa fa-hand-pointer fa-2x'></i>"
+
+fa_icons <- tribble(
+  ~tool.type, ~type,
+  "Scripting", "<i class='fa fa-file-code fa-2x'></i>",
+  "Point and Click", "<i class='fa fa-hand-pointer fa-2x'></i>"
+)
+
+oxshef_viz_tools <- read_xlsx("oxshef-viz-tools.xlsx")
+
+oxshef_viz_tools %>%
+  arrange(tool) %>%
+  mutate(tool = paste0("<a href='", url,"' target='_blank'>", tool, "</a>")) %>%
+  left_join(fa_icons) %>%
+  select(-url, -tool.type) %>%
+  mutate(external.data.support = ifelse(external.data.support,
+                                         "<i class='fas fa-circle'></i>",
+                                         "<i class='far fa-circle'></i>")) %>%
+  datatable(escape = FALSE,
+            rownames = FALSE,
+            colnames = c("Visualisation Tool",
+                         "Brief Description",
+                         "Allows external data to be accessed?",
+                         "Type of tool"),
+            options = list(
+              scrollX = TRUE,
+                autoWidth = TRUE,
+  columnDefs = list(list(width = '100px', targets = c(0,2)),
+                    list(className = 'dt-center', targets = c(0,2,3))),
+              dom = "t"
+            ),
+  width = "100%")
+```
