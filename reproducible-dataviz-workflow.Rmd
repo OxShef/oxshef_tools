@@ -1,0 +1,92 @@
+---
+title: "Reproducible dataviz workflow"
+output:
+  html_document:
+    toc: false
+    toc_float:
+      collapsed: false
+    includes:
+      before_body: [includes/include_header.html, includes/include_header_navpage.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+## Towards a reproducible dataviz workflow
+
+Reproducible research requires full documentation and disclosure of all steps in your data collection, analysis and presentation. Creating reproducible data visualisations is no different. It should be possible for another researcher (or member of the public) to recreate your dataviz by following your workflow. 
+
+If a dataviz tool allows researchers to meet **all** of the following criteria, it passes the **OxShef: dataviz** reproducability standards and is marked as such in the [table of dataviz tools](oxshef-tools.netlify.com/list-of-tools.html#table-of-tools). We strive to provide [dedicated training, tutorials and templates](training-tutorials-and-templates) for all tools that meet these criteria.
+
+<div class='row'>
+
+<div class='col-sm-5'>
+
+- Your research data is published in a DOI-issuing repository
+- Your visualisation pulls data directly from the data repository
+- Your scripts/steps to produce your visualisation are deposited in a DOI-issuing repository
+- Your research data, publication, visualisation scripts all reference one another
+- Your ORCID is included in all of these outputs.
+
+</div>
+
+<div class='col-sm-7'>
+
+<center>
+
+<img src='images/rdm-for-all-outputs.png' style='max-width:500px' width='100%'></img>
+
+</center>
+
+</div>
+
+</div>
+
+To help you select tools and a workflow that meets these criteria, you might find the flowchart below useful:
+
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+```{r tool-selection-css, results="asis", echo=FALSE}
+cat("
+<style>
+#mermaidChart0 { 
+    min-height: 900px;
+    min-width: 800px;
+}
+</style>
+")
+```
+
+
+<a href='http://google.com' target='_blank'>
+```{r tool-selection-flowchart, echo = FALSE, fig.height=6}
+library("DiagrammeR")
+
+oxshef_flowchart <- DiagrammeR("graph TB;
+           A{Is your data public?} -- yes -->doiQuestion;
+           A -- no -->B[<center><b>Oxshef: dataviz</b> exclusively supports researchers in <br> the visualisation and promotion of <br> public datasets.</center>];
+           doiQuestion{<center>Is your dataset published<br> to a DOI-issuing data repository?</center>};
+           doiNotIssued[<center>Please ensure to deposit your data<br> in a DOI-issuing repository</center>]
+           doiQuestion -- yes --> externalDataQuestion;
+           doiQuestion -- no --> doiNotIssued;
+           externalDataQuestion{<center>Does your visualisation tool <br> allow data to be pulled from <br> your data repository?</center>};
+           externalDataSupported[<center>Excellent!<br> Our resources are designed for you!</center>];
+           externalDataUnsupported[<center>We recommend <b>not</b> using these tools</center>];
+           externalDataUnknown[<center>Refer to our <br>http://oxshef-charts.netlify.com/tools.html page Twitter oxshef_dataviz</center>];
+           externalDataQuestion -- yes -->externalDataSupported;
+           externalDataQuestion -- no -->externalDataUnsupported;
+           externalDataQuestion -- I don't know -->externalDataUnknown",
+           width = "100%",
+           height = "900px")
+library("htmltools")
+
+widgetframe::frameWidget(oxshef_flowchart)
+```
+</a>
