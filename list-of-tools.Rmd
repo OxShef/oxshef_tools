@@ -22,16 +22,49 @@ knitr::opts_chunk$set(
 
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-# Visualisation Tools
+## Visualisation Tools
 
-There are hundreds of visualisation tools and packages used by researchers for communicating research datasets. **OxShef: Tools** cannot hope to be a reference or a recommendation engine for all of these solutions. For a birds eye view of what tools are available you might find this resource useful: http://www.visualisingdata.com/resources/.
+There are hundreds of visualisation tools and packages used by researchers for communicating research datasets. **OxShef: Tools** cannot hope to be a reference or a recommendation engine for all of these solutions. We maintain a collection of the most popular/versatile tools [below](#table-of-tools). For a birds eye view of the entire range of dataviz tools avaialble, you might find this resource useful: http://www.visualisingdata.com/resources/.
 
-In general, visualisation tools fall into one of two categories:
+In [our table of tools](#table-of-tools) we differentiate tools based on if they are able to pull data from external sources:
 
-- Point and Click Tools <i class='fa fa-hand-pointer'></i>: These allow users to build visualisations interactively, for instance selecting columns from a spreadsheet-like view of your data and clicking "Create BarChart". Examples of this type of tool include: **Excel**, **SPSS** and **Tableau**.
-- Scripting Tools <i class='fa fa-file-code'></i>: These require users to write code (or scripts) to generate visualisations, such tools in general have a steeper initial learning curve than "point and click tools" but allow greater overall flexibility  and extensibility. Examples of this type of tool include: **Python**, **R**.
+<div class='row'>
 
-We further sub-divide tools by their ability to pull data from external sources, i.e. from a DOI-issuing data repository.
+<div class='col-sm-6'>
+
+<center><h5>Data **can be** pulled from external sources  <i class='fas fa-circle'></i></i></h5></center>
+Tools that can pull data from external sources fullfil **OxShef: Tools** [reproducible dataviz workflow requirements](reproducible-dataviz-workflow.html) and are highly recommended by us. In general, we will provide a dedicated website for such tools in [the table below](#table-of-tools).
+
+</div>
+
+<div class='col-sm-6'>
+
+<center><h5>Data **cannot** pulled from external sources  <i class='far fa-circle'></i></i></h5></center>
+As data cannot be pulled directly from a data repository, these tools **do not** meet **OxShef: Tools** [reproducible dataviz workflow requirements](reproducible-dataviz-workflow.html). You will be required to duplicate your data on the visualisation service's website, which makes keeping your visualisation consistent with your canonical datset difficult.
+
+</div>
+
+</div>
+
+Visualisation tools fit neatly into these two categories, either of these may be suitable for a [reproducible dataviz workflow](reproducible-dataviz-workflow.html).
+
+<div class='row'>
+
+<div class='col-sm-6'>
+
+<center><h5>Point and Click Tools <i class='fa fa-hand-pointer'></i></h5></center>
+These allow users to build visualisations interactively, for instance selecting columns from a spreadsheet-like view of your data and clicking "Create BarChart". Examples of this type of tool include: **Excel**, **SPSS** and **Tableau**.
+
+</div>
+
+<div class='col-sm-6'>
+
+<center><h5>Scripting Tools <i class='fa fa-file-code'></i></h5></center>
+These require users to write code (or scripts) to generate visualisations, such tools in general have a steeper initial learning curve than "point and click tools" but allow greater overall flexibility  and extensibility. Examples of this type of tool include: **Python**, **R**.
+</div>
+</div>
+
+<a name='table-of-tools'></a>
 
 ```{r viz-tools-DT, echo = FALSE}
 library("tidyverse")
@@ -51,24 +84,36 @@ oxshef_viz_tools <- read_xlsx("oxshef-viz-tools.xlsx")
 
 oxshef_viz_tools %>%
   arrange(tool) %>%
-  mutate(tool = paste0("<a href='", url,"' target='_blank'>", tool, "</a>")) %>%
+  mutate(logo = paste0(
+    "<a href='", url, "' target='_blank'>",
+    "<img src='images/table-of-tools-logos/", image.path, "' style='max-height:80px'></img>",
+    "</a>"
+  )) %>%
   left_join(fa_icons) %>%
-  select(-url, -tool.type) %>%
+  select(-url, -tool.type, -image.path, -tool) %>%
   mutate(external.data.support = ifelse(external.data.support,
-                                         "<i class='fas fa-circle'></i>",
-                                         "<i class='far fa-circle'></i>")) %>%
-  datatable(escape = FALSE,
-            rownames = FALSE,
-            colnames = c("Visualisation Tool",
-                         "Brief Description",
-                         "Allows external data to be accessed?",
-                         "Type of tool"),
-            options = list(
-              scrollX = TRUE,
-                autoWidth = TRUE,
-  columnDefs = list(list(width = '100px', targets = c(0,2)),
-                    list(className = 'dt-center', targets = c(0,2,3))),
-              dom = "t"
-            ),
-  width = "100%")
+    "<i class='fas fa-circle'></i>",
+    "<i class='far fa-circle'></i>"
+  )) %>%
+  select(logo, everything()) %>%
+  datatable(
+    escape = FALSE,
+    rownames = FALSE,
+    colnames = c(
+      "Visualisation Tool",
+      "Brief Description",
+      "Allows external data to be accessed?",
+      "Type of tool"
+    ),
+    options = list(
+      scrollX = TRUE,
+      autoWidth = TRUE,
+      columnDefs = list(
+        list(width = "100px", targets = c(0, 2)),
+        list(className = "dt-center", targets = c(0, 2, 3))
+      ),
+      dom = "t"
+    ),
+    width = "100%"
+  )
 ```
