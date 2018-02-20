@@ -134,8 +134,9 @@ $(document).ready(function () {
     <div id="menu">
       <div id="menuToggler"></div>
       <div id="menuItems">
-        <a class="menuItem" href="choosing-a-tool.html">Advice on selecting a tool</a>
+        <a class="menuItem" href="reproducible-dataviz-workflow.html">Reproducible dataviz workflow</a>
         <a class="menuItem" href="list-of-tools.html">Overview of available tools</a>
+        <a class="menuItem" href="training-tutorials-and-templates.html">Training, Tutorials and Templates</a>
         <a class="menuItem gitHub" href="https://github.com/OxShef/oxshef_rmd_template"></a>
         <a class="menuItem gitHubText" href="https://github.com/OxShef/oxshef_rmd_template">Source on GitHub</a>
       </div>
@@ -179,17 +180,50 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 
 
 <p><link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"></p>
-<div id="visualisation-tools" class="section level1">
-<h1>Visualisation Tools</h1>
-<p>There are hundreds of visualisation tools and packages used by researchers for communicating research datasets. <strong>OxShef: Tools</strong> cannot hope to be a reference or a recommendation engine for all of these solutions. For a birds eye view of what tools are available you might find this resource useful: <a href="http://www.visualisingdata.com/resources/" class="uri">http://www.visualisingdata.com/resources/</a>.</p>
-<p>In general, visualisation tools fall into one of two categories:</p>
-<ul>
-<li>Point and Click Tools <i class='fa fa-hand-pointer'></i>: These allow users to build visualisations interactively, for instance selecting columns from a spreadsheet-like view of your data and clicking “Create BarChart”. Examples of this type of tool include: <strong>Excel</strong>, <strong>SPSS</strong> and <strong>Tableau</strong>.</li>
-<li>Scripting Tools <i class='fa fa-file-code'></i>: These require users to write code (or scripts) to generate visualisations, such tools in general have a steeper initial learning curve than “point and click tools” but allow greater overall flexibility and extensibility. Examples of this type of tool include: <strong>Python</strong>, <strong>R</strong>.</li>
-</ul>
-<p>We further sub-divide tools by their ability to pull data from external sources, i.e. from a DOI-issuing data repository.</p>
-<div id="htmlwidget-3ba549cb9ea17429bdf2" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3ba549cb9ea17429bdf2">{"x":{"filter":"none","data":[["<a href='https://plot.ly/products/dash/' target='_blank'>Dash<\/a>","<a href='http://plot.ly' target='_blank'>Plotly<\/a>","<a href='http://cran.r-project.org' target='_blank'>R<\/a>","<a href='http://shiny.rstudio.com' target='_blank'>Shiny<\/a>","<a href='https://vega.github.io/vega-lite/' target='_blank'>Vega-Lite<\/a>"],["Dash allows Python users to build rich interactive web applications and visualisations through a combination of different technologies, including React and Flask. Currently the <b>OxShef: dataviz<\/b> initiative is working on a website dedicated to Dash which should be published soon.","Plotly provides a free tool for creating interactive visualisations from dataset uploaded to the Plotly service. It's a great tool for creating \"one off\" visualisations but does not fit into a fully reproducible workflow.","R is a very popular scripting language that includes a wide range of popular visualisation tools, including ggplot2 and htmlwidgets for interactive visualisation. It is possible to build fully functioning web applications with R by using Shiny. We thoroughly recommend that R users browse <a href='http://oxshef-shiny.netlify.com' target='_blank' style='font-weight:bold'>OxShef: Shiny<\/a> to see what's possible.","Shiny is a technology that allows users of R to create interactive web applications without *strictly* having to learn HTML, CSS, JavaScript or anything about web-hosting. There is a dedicated <a href='http://oxshef-shiny.netlify.com' target='_blank' style='font-weight:bold'>OxShef: Shiny<\/a> website with tutorials and templates for creating your own data visualisations with Shiny.\r\n<br>\r\n<a href='http://oxshef-shiny.netlify.com' target='_blank' style='font-weight:bold'>[Read more...]<\/a>","A Grammar of Interactive Graphics built with JSON"],["<i class='far fa-circle'><\/i>","<i class='far fa-circle'><\/i>","<i class='far fa-circle'><\/i>","<i class='fas fa-circle'><\/i>","<i class='fas fa-circle'><\/i>"],["<i class='fa fa-hand-pointer fa-2x'><\/i>","<i class='fa fa-hand-pointer fa-2x'><\/i>","<i class='fa fa-file-code fa-2x'><\/i>","<i class='fa fa-file-code fa-2x'><\/i>","<i class='fa fa-file-code fa-2x'><\/i>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Visualisation Tool<\/th>\n      <th>Brief Description<\/th>\n      <th>Allows external data to be accessed?<\/th>\n      <th>Type of tool<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"autoWidth":true,"columnDefs":[{"width":"100px","targets":[0,2]},{"className":"dt-center","targets":[0,2,3]}],"dom":"t","order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="visualisation-tools" class="section level2">
+<h2>Visualisation Tools</h2>
+<p>There are hundreds of visualisation tools and packages used by researchers for communicating research datasets. <strong>OxShef: Tools</strong> cannot hope to be a reference or a recommendation engine for all of these solutions. We maintain a collection of the most popular/versatile tools <a href="#table-of-tools">below</a>. For a birds eye view of the entire range of dataviz tools avaialble, you might find this resource useful: <a href="http://www.visualisingdata.com/resources/" class="uri">http://www.visualisingdata.com/resources/</a>.</p>
+<p>In <a href="#table-of-tools">our table of tools</a> we differentiate tools based on if they are able to pull data from external sources:</p>
+<div class="row">
+<div class="col-sm-6">
+<center>
+<h5>
+Data <strong>can be</strong> pulled from external sources <i class='fas fa-circle'></i></i>
+</h5>
+</center>
+<p>Tools that can pull data from external sources fullfil <strong>OxShef: Tools</strong> <a href="reproducible-dataviz-workflow.html">reproducible dataviz workflow requirements</a> and are highly recommended by us. In general, we will provide a dedicated website for such tools in <a href="#table-of-tools">the table below</a>.</p>
+</div>
+<div class="col-sm-6">
+<center>
+<h5>
+Data <strong>cannot</strong> pulled from external sources <i class='far fa-circle'></i></i>
+</h5>
+</center>
+<p>As data cannot be pulled directly from a data repository, these tools <strong>do not</strong> meet <strong>OxShef: Tools</strong> <a href="reproducible-dataviz-workflow.html">reproducible dataviz workflow requirements</a>. You will be required to duplicate your data on the visualisation service’s website, which makes keeping your visualisation consistent with your canonical datset difficult.</p>
+</div>
+</div>
+<p>Visualisation tools fit neatly into these two categories, either of these may be suitable for a <a href="reproducible-dataviz-workflow.html">reproducible dataviz workflow</a>.</p>
+<div class="row">
+<div class="col-sm-6">
+<center>
+<h5>
+Point and Click Tools <i class='fa fa-hand-pointer'></i>
+</h5>
+</center>
+<p>These allow users to build visualisations interactively, for instance selecting columns from a spreadsheet-like view of your data and clicking “Create BarChart”. Examples of this type of tool include: <strong>Excel</strong>, <strong>SPSS</strong> and <strong>Tableau</strong>.</p>
+</div>
+<div class="col-sm-6">
+<center>
+<h5>
+Scripting Tools <i class='fa fa-file-code'></i>
+</h5>
+</center>
+<p>These require users to write code (or scripts) to generate visualisations, such tools in general have a steeper initial learning curve than “point and click tools” but allow greater overall flexibility and extensibility. Examples of this type of tool include: <strong>Python</strong>, <strong>R</strong>.</p>
+</div>
+</div>
+<p><a name='table-of-tools'></a></p>
+<div id="htmlwidget-8403d6b0e2dde63c75de" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8403d6b0e2dde63c75de">{"x":{"filter":"none","data":[["<a href='https://plot.ly/products/dash/' target='_blank'><img src='images/table-of-tools-logos/dash-logo.svg' style='max-height:80px'><\/img><\/a>","<a href='http://jupyter.org/' target='_blank'><img src='images/table-of-tools-logos/jupyter-logo.png' style='max-height:80px'><\/img><\/a>","<a href='http://plot.ly' target='_blank'><img src='images/table-of-tools-logos/plotly-logo.png' style='max-height:80px'><\/img><\/a>","<a href='http://cran.r-project.org' target='_blank'><img src='images/table-of-tools-logos/r-logo.png' style='max-height:80px'><\/img><\/a>","<a href='http://shiny.rstudio.com' target='_blank'><img src='images/table-of-tools-logos/shiny-logo.png' style='max-height:80px'><\/img><\/a>","<a href='https://vega.github.io/vega-lite/' target='_blank'><img src='images/table-of-tools-logos/vega-lite-logo.png' style='max-height:80px'><\/img><\/a>"],["Dash allows Python users to build rich interactive web applications and visualisations through a combination of different technologies, including React and Flask. OxShef are currently investigating the reproducability of a Dash-driven dataviz visualisation workflow, which may lead to a dedicated site about this tool in the future.","Jupyter (the spiritual successor to iPython notebooks) is a powerful tool for creating rich documents incorporating code, data and visualisation outputs. Jupyter notebooks allow code written in Python, R and more to be combined together easily. Oxshef are currently developing a site dedicated to using this tool in a reproducible dataviz workflow.","Plotly provides a free tool for creating interactive visualisations from dataset uploaded to the Plotly service. It's a great tool for creating \"one off\" visualisations but does not fit into a fully reproducible workflow as data must be siloed in the plot.ly website.","R is a very popular scripting language that includes a wide range of popular visualisation tools, including ggplot2 and htmlwidgets for interactive visualisation. It is possible to build fully functioning web applications with R by using Shiny. We thoroughly recommend that R users browse <a href='http://oxshef-shiny.netlify.com' target='_blank' style='font-weight:bold'>OxShef: Shiny<\/a> to see what's possible.","Shiny is a technology that allows users of R to create interactive web applications without *strictly* having to learn HTML, CSS, JavaScript or anything about web-hosting. There is a dedicated <a href='http://oxshef-shiny.netlify.com' target='_blank' style='font-weight:bold'>OxShef: Shiny<\/a> website with tutorials and templates for creating your own data visualisations with Shiny.\r\n<br>\r\n<a href='http://oxshef-shiny.netlify.com' target='_blank' style='font-weight:bold'>[Read more...]<\/a>","Vega-Lite provides a high-level grammar of interactive graphics, allowing users to specify \"charts as data\" in well designed JSON format. OxShef are currently investigating the reproducability of a Vega-Lite driven dataviz workflow, which may lead to a dedicated site about this tool in the future."],["<i class='far fa-circle'><\/i>","<i class='fas fa-circle'><\/i>","<i class='far fa-circle'><\/i>","<i class='far fa-circle'><\/i>","<i class='fas fa-circle'><\/i>","<i class='fas fa-circle'><\/i>"],["<i class='fa fa-hand-pointer fa-2x'><\/i>","<i class='fa fa-file-code fa-2x'><\/i>","<i class='fa fa-hand-pointer fa-2x'><\/i>","<i class='fa fa-file-code fa-2x'><\/i>","<i class='fa fa-file-code fa-2x'><\/i>","<i class='fa fa-file-code fa-2x'><\/i>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Visualisation Tool<\/th>\n      <th>Brief Description<\/th>\n      <th>Allows external data to be accessed?<\/th>\n      <th>Type of tool<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"autoWidth":true,"columnDefs":[{"width":"100px","targets":[0,2]},{"className":"dt-center","targets":[0,2,3]}],"dom":"t","order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 
   </div> <!-- articleBandContent -->

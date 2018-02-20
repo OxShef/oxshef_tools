@@ -26,7 +26,7 @@ list.files(pattern = "Rmd", recursive = TRUE) %>%
   .[[1]] %>%
   gsub("[^[:alnum:].]", "", .) %>%
   unique()
-#> [1] "DiagrammeR" "htmltools"  "tidyverse"  "DT"         "readxl"
+#> [1] "tidyverse"  "DT"         "readxl"     "DiagrammeR" "htmltools"
 ```
 
 Features of the site
