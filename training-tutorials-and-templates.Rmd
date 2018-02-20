@@ -11,13 +11,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-	echo = FALSE,
-	message = FALSE,
-	warning = FALSE
-)
-```
 
 **OxShef: Tools** cannot be a complete overview of all visualisation tools available, nor can we maintain a complete overview of training and templates available for the dataviz tools that meet our [reproducible dataviz workflow criteria](reproducible-dataviz-workflow.html). However, you might find these resources generally useful:
 
