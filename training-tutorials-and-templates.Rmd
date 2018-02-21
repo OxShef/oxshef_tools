@@ -12,7 +12,7 @@ editor_options:
 ---
 
 
-**OxShef: Tools** cannot be a complete overview of all visualisation tools available, nor can we maintain a complete overview of training and templates available for the dataviz tools that meet our [reproducible dataviz workflow criteria](reproducible-dataviz-workflow.html). However, you might find these resources generally useful:
+**OxShef: Tools** cannot be a complete overview of all visualisation tools available, nor can we maintain a complete overview of training and templates available for the dataviz tools that meet our [reproducible dataviz workflow criteria](oxshef-tools.netlify.com/reproducible-dataviz-workflow.html). However, you might find these resources generally useful:
 
 - [Awesome Lists (Data Viz)](https://github.com/sindresorhus/awesome): This is a crowd sourced collection of resources about data visualisation tools, tutorials and other resources. It's maintained via GitHub, so anyone can contribute.
 
@@ -20,20 +20,37 @@ editor_options:
 
 - [Datacamp.com](datacamp.com): Subscription learning service with courses on a variety of dataviz tools.
 
-Materials specific to dataviz tools that meet our [reproducible dataviz workflow criteria](reproducible-dataviz-workflow.html).
+Materials specific to dataviz tools that meet our [reproducible dataviz workflow criteria](oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
 
 ##  {.tabset}
 
 ### Dash
 
-Yay
+[Dash](https://plot.ly/products/dash/) is a technology developed by [plot.ly](http://plot.ly) that allows Python users to create rich, interactive data visualisations and interfaces - commonly abbreviated to "data dashboards". This is a fairly new technology (first released June 2017) that does not have much coverage outside of the first-party resources on the plot.ly website.
+
+**OxShef: dataviz** are currently drafting a dedicated site with training, tutorials and templates for Dash dashboards. In the meantime, we recommend you check out the [blog annoucement](https://medium.com/@plotlygraphs/introducing-dash-5ecf7191b503) and Chris' [conference presentation at SciPy 2017](https://youtu.be/sea2K4AuPOk).
 
 ### Jupyter
 
-YAY
+[Jupyter](jupyter.org) notebooks are the successor to iPython notebooks, a *literate programming* technology that allows text, code, charts and interactive content to be combined together into a single document. Jupyter allows code from multiple languages to be combined in the same document, the easiest to use languaes are **Julia**, **Python** and **R**. Using a combination of these technologies it is possible to build rich, interactive data visualisations. With some additional effort it is possible to host Jupyter notebooks in such a fashion that enables a [reproducible dataviz workflow](oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
+
+**OxShef: dataviz** are currently drafting a dedicated site with training, tutorials and templates for using Jupyter in a reproducible dataviz workfow. In the meantime, you might find this [Datacamp.com free tutorial](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook) useful and there is also a Lynda.com course that introduces the basics of Jupyter notebooks
+
+<iframe width='560' height='315' src='https://www.lynda.com/player/embed/543336?fs=3&w=560&h=315&ps=paused&utm_medium=referral&utm_source=embed+video&utm_campaign=ldc-website&utm_content=vid-543336' mozallowfullscreen='true' webkitallowfullscreen='true' allowfullscreen='true' frameborder='0'></iframe><div style="margin-bottom:10px"><strong><a href="https://www.lynda.com/NumPy-tutorials/NumPy-Data-Science-Essential-Training/508873-2.html" title="Learn how to use NumPy, Python, and Jupyter Notebook for numerical, scientific, and statistical programming as you build your analytics, machine learning, and data science skills.">NumPy Data Science Essential Training</a></strong> by <a href="https://www.lynda.com/author/1705401">Charles Kelly</a></div>
 
 ### Shiny
 
-The best
+[Shiny](shiny.rstudio.com) is an `R` library developed by RStudio that allows R users to create interactive web applications without having to learn HTML, CSS or JavaScript. [**OxShef: Shiny**](oxshef-shiny.netlify.com) provides a host of training, tutorials and templates for creating Shiny apps within the context of a fully [reproducible dataviz workflow](oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
 
-### Vega-Lite
+There are many excellent resources for learning more (and keeping up to date with) Shiny:
+
+- [Awesome Shiny Resources](https://github.com/grabear/awesome-rshiny): This is a crowd sourced collection of resources for Shiny users.
+- [Datacamp.com Shiny Course](https://www.datacamp.com/courses/building-web-applications-in-r-with-shiny): This is a free entirely-in-browser introduction to Shiny that is highly recommended to complete beginners to Shiny.
+- [RStudio's Shiny Gallery](shiny.rstudio.com/gallery/): This is an excellent showcase of examples and template Shiny apps, along with in-depth technical documentation on how the internals of Shiny works.
+
+There is also a Lynda.com course dedicated to creating Shiny apps and interactive presentations with RMarkdown.
+
+<iframe width='560' height='315' src='https://www.lynda.com/player/embed/490016?fs=3&w=560&h=315&ps=paused&utm_medium=referral&utm_source=embed+video&utm_campaign=ldc-website&utm_content=vid-490016' mozallowfullscreen='true' webkitallowfullscreen='true' allowfullscreen='true' frameborder='0'></iframe><div style="margin-bottom:10px"><strong><a href="https://www.lynda.com/RStudio-tutorials/Creating-Interactive-Presentations-Shiny-R/452087-2.html" title="Make the results of big data analysis more compelling and clear. Learn how to create interactive presentations and dashboards with RStudio and Shiny.">Creating Interactive Presentations with Shiny and R</a></strong> by <a href="https://www.lynda.com/author/4174500">Martin Hadley</a></div>
+
+
+
