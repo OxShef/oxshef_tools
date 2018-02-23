@@ -12,15 +12,15 @@ editor_options:
 ---
 
 
-**OxShef: Tools** cannot be a complete overview of all visualisation tools available, nor can we maintain a complete overview of training and templates available for the dataviz tools that meet our [reproducible dataviz workflow criteria](oxshef-tools.netlify.com/reproducible-dataviz-workflow.html). However, you might find these resources generally useful:
+**OxShef: Tools** cannot be a complete overview of all visualisation tools available, nor can we maintain a complete overview of training and templates available for the dataviz tools that meet our [reproducible dataviz workflow criteria](https://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html). However, you might find these resources generally useful:
 
 - [Awesome Lists (Data Viz)](https://github.com/sindresorhus/awesome): This is a crowd sourced collection of resources about data visualisation tools, tutorials and other resources. It's maintained via GitHub, so anyone can contribute.
 
-- [Lynda.com](Lynda.com): Subscription learning service with courses on a wide variety of dataviz tools, many Universities provide access to Lynda.com for free. Contact your local research support teams for support.
+- [Lynda.com](https://Lynda.com): Subscription learning service with courses on a wide variety of dataviz tools, many Universities provide access to Lynda.com for free. Contact your local research support teams for support.
 
-- [Datacamp.com](datacamp.com): Subscription learning service with courses on a variety of dataviz tools.
+- [Datacamp.com](https://datacamp.com): Subscription learning service with courses on a variety of dataviz tools.
 
-Materials specific to dataviz tools that meet our [reproducible dataviz workflow criteria](oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
+Materials specific to dataviz tools that meet our [reproducible dataviz workflow criteria](https://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
 
 ##  {.tabset}
 
@@ -32,7 +32,7 @@ Materials specific to dataviz tools that meet our [reproducible dataviz workflow
 
 ### Jupyter
 
-[Jupyter](jupyter.org) notebooks are the successor to iPython notebooks, a *literate programming* technology that allows text, code, charts and interactive content to be combined together into a single document. Jupyter allows code from multiple languages to be combined in the same document, the easiest to use languaes are **Julia**, **Python** and **R**. Using a combination of these technologies it is possible to build rich, interactive data visualisations. With some additional effort it is possible to host Jupyter notebooks in such a fashion that enables a [reproducible dataviz workflow](oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
+[Jupyter](jupyter.org) notebooks are the successor to iPython notebooks, a *literate programming* technology that allows text, code, charts and interactive content to be combined together into a single document. Jupyter allows code from multiple languages to be combined in the same document, the easiest to use languaes are **Julia**, **Python** and **R**. Using a combination of these technologies it is possible to build rich, interactive data visualisations. With some additional effort it is possible to host Jupyter notebooks in such a fashion that enables a [reproducible dataviz workflow](https://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
 
 **OxShef: dataviz** are currently drafting a dedicated site with training, tutorials and templates for using Jupyter in a reproducible dataviz workfow. In the meantime, you might find this [Datacamp.com free tutorial](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook) useful and there is also a Lynda.com course that introduces the basics of Jupyter notebooks
 
@@ -40,7 +40,7 @@ Materials specific to dataviz tools that meet our [reproducible dataviz workflow
 
 ### Shiny
 
-[Shiny](shiny.rstudio.com) is an `R` library developed by RStudio that allows R users to create interactive web applications without having to learn HTML, CSS or JavaScript. [**OxShef: Shiny**](oxshef-shiny.netlify.com) provides a host of training, tutorials and templates for creating Shiny apps within the context of a fully [reproducible dataviz workflow](oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
+[Shiny](shiny.rstudio.com) is an `R` library developed by RStudio that allows R users to create interactive web applications without having to learn HTML, CSS or JavaScript. [**OxShef: Shiny**](https://oxshef-shiny.netlify.com) provides a host of training, tutorials and templates for creating Shiny apps within the context of a fully [reproducible dataviz workflow](https://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
 
 There are many excellent resources for learning more (and keeping up to date with) Shiny:
 
