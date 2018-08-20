@@ -22,10 +22,10 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-0.9/htmlwidgets.js"></script>
-<script src="site_libs/blazy-1.8.2/blazy.min.js"></script>
-<script src="site_libs/pymjs-1.3.2/pym.v1.js"></script>
-<script src="site_libs/widgetframe-binding-0.3.0/widgetframe.js"></script>
+<script src="site_libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<link href="site_libs/vis-4.20.1/vis.css" rel="stylesheet" />
+<script src="site_libs/vis-4.20.1/vis.min.js"></script>
+<script src="site_libs/visNetwork-binding-2.0.4/visNetwork.js"></script>
 
 <meta name="description" content="This is a template site using RMarkdown for the OxShef Project - a collaboration between University of Oxford and University of Sheffield" />
 
@@ -100,6 +100,9 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -199,15 +202,8 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 </div>
 </div>
 <p>To help you select tools and a workflow that meets these criteria, you might find the flowchart below useful:</p>
-<p><link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"></p>
-<style>
-#mermaidChart0 { 
-    min-height: 900px;
-    min-width: 800px;
-}
-</style>
-<p><a href='http://google.com' target='_blank'> <div id="htmlwidget-f22107621154887cc1d7" style="width:100%;height:900px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f22107621154887cc1d7">{"x":{"url":"reproducible-dataviz-workflow_files/figure-html//widgets/widget_tool-selection-flowchart.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script> </a></p>
+<div id="htmlwidget-e8f6c7f0fd8e46ee1c4c" style="width:100%;height:500px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e8f6c7f0fd8e46ee1c4c">{"x":{"nodes":{"id":[1,2,3,4,5,6,7,8,9,10,11,12,13],"label":["Is your data public?","✅","❌","Reproducible dataviz require Open Data. \nLearn more at oxshef.io","Does your dataset \nhave a DOI?","❌","✅","Visit repositories.oxshef.io \nto learn about DOI","Does your dataviz\n pull data from a data repository?","✅","❌","You have a reproducible \ndataviz workflow!","Visit tools.oxshef.io \nto learn more"],"title":[null,null,null,"<a href='https://oxshef.io' target='_blank'>oxshef.io<\/a>",null,null,null,"<a href='https://repositories.oxshef.io' target='_blank'>repositories.oxshef.io<\/a>",null,null,null,null,"<a href='https://tools.oxshef.io' target='_blank'>tools.oxshef.io<\/a>"],"shape":["diamond","dot","dot","square","diamond","dot","dot","square","diamond","dot","dot","dot","dot"],"size":[25,5,5,25,25,5,5,25,25,5,5,25,25],"color":["#97C2FC","green","red","#97C2FC","#97C2FC","red","green","red","#97C2FC","green","red","green","red"]},"edges":{"from":[1,1,3,2,5,5,6,7,9,9,10,11],"to":[2,3,4,5,7,6,8,9,10,11,12,13]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","font":{"size":16}},"manipulation":{"enabled":false},"edges":{"color":"#97C2FC"},"interaction":{"dragNodes":false,"dragView":false,"selectable":false},"layout":{"hierarchical":{"enabled":true,"levelSeparation":180,"blockShifting":false,"edgeMinimization":false,"direction":"LR","sortMethod":"directed"}}},"groups":null,"width":"100%","height":"500px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
 </div>
 
   </div> <!-- articleBandContent -->
