@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 Reproducible research requires full documentation and disclosure of all steps in your data collection, analysis and presentation. Creating reproducible data visualisations is no different. It should be possible for another researcher (or member of the public) to recreate your dataviz by following your workflow. 
 
-If a dataviz tool allows researchers to meet **all** of the following criteria, it passes the **OxShef: dataviz** reproducability standards and is marked as such in the [table of dataviz tools](https://oxshef-tools.netlify.com/list-of-tools.html#table-of-tools). We strive to provide [dedicated training, tutorials and templates](training-tutorials-and-templates) for all tools that meet these criteria.
+If a dataviz tool allows researchers to meet **all** of the following criteria, it passes the **OxShef: dataviz** reproducability standards and is marked as such in the [table of dataviz tools](https://tools.oxshef.io/list-of-tools.html#table-of-tools). We strive to provide [dedicated training, tutorials and templates](training-tutorials-and-templates) for all tools that meet these criteria.
 
 <div class='row'>
 
