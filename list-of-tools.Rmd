@@ -26,7 +26,16 @@ knitr::opts_chunk$set(
 
 There are hundreds of visualisation tools and packages used by researchers for communicating research datasets. **OxShef: Tools** cannot hope to be a reference or a recommendation engine for all of these solutions. We maintain a collection of the most popular/versatile tools [below](#table-of-tools). For a birds eye view of the entire range of dataviz tools avaialble, you might find this resource useful: http://www.visualisingdata.com/resources/.
 
-In [our table of tools](#table-of-tools) we differentiate tools based on if they are able to pull data from external sources:
+
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#table-description" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Learn more about this table...
+  </a>
+</p>
+<div class="collapse" id="table-description">
+  <div class="card card-body">
+
+<br>
 
 <div class='row'>
 
@@ -63,6 +72,14 @@ These allow users to build visualisations interactively, for instance selecting 
 These require users to write code (or scripts) to generate visualisations, such tools in general have a steeper initial learning curve than "point and click tools" but allow greater overall flexibility  and extensibility. Examples of this type of tool include: **Python**, **R**.
 </div>
 </div>
+
+<br/>
+</div>
+</div>
+
+
+
+
 
 <a name='table-of-tools'></a>
 
