@@ -22,6 +22,10 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="site_libs/vis-4.20.1/vis.css" rel="stylesheet" />
+<script src="site_libs/vis-4.20.1/vis.min.js"></script>
+<script src="site_libs/visNetwork-binding-2.0.5/visNetwork.js"></script>
 
 <meta name="description" content="This is a template site using RMarkdown for the OxShef Project - a collaboration between University of Oxford and University of Sheffield" />
 
@@ -75,6 +79,7 @@ h6 {
 </style>
 
 <link rel="stylesheet" href="css/rmarkdown.css" type="text/css" />
+<link rel="stylesheet" href="css/title-0px.css" type="text/css" />
 
 </head>
 
@@ -181,7 +186,7 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 <strong>OxShef: Tools</strong> provides advice on choosing data visualisations tools that <a href="reproducible-dataviz-workflow.html">support a reproducible dataviz workflow</a>.
 </h2>
 <center>
-<p><img src='images/rdm-for-all-outputs.png' style='max-width:600px' width='100%'></img></p>
+<p><img src='images/dois-and-viz-tool.png' style='max-width:600px' width='100%'></img></p>
 </center>
 <hr>
 <h2>
@@ -192,6 +197,17 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 <p><img src="images/dash-logo.svg" alt="" width="22%" height="12%">   <img src="images/jupyter-logo.png" alt="" width="12%" height="12%">   <img src="images/shiny-logo.png" alt="" width="10%" height="10%">   <img src="images/vega-lite-logo.png" alt="" width="22%" height="12%"></p>
 </p>
 </center>
+<h2>
+<strong>OxShef: Tools</strong> provides an overview of several <a href="https://tools.oxshef.io">visualisation tools</a> widely used in academia. The flowchart below is designed to guide you whether our resources can help you visualise your dataset:
+</h2>
+<style>
+#mermaidChart0 { 
+    min-height: 900px;
+    min-width: 800px;
+}
+</style>
+<div id="htmlwidget-d2231bd1b2f2d4becb38" style="width:100%;height:500px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d2231bd1b2f2d4becb38">{"x":{"nodes":{"id":[1,2,3,4,5,6,7,8,9,10,11,12,13],"label":["Is your data public?","✅","❌","Reproducible dataviz require Open Data. \nLearn more at oxshef.io","Does your dataset \nhave a DOI?","❌","✅","Visit repositories.oxshef.io \nto learn about DOI","Does your dataviz\n pull data from a data repository?","✅","❌","You have a reproducible \ndataviz workflow!","Visit tools.oxshef.io \nto learn more"],"title":[null,null,null,"<a href='https://oxshef.io' target='_blank'>oxshef.io<\/a>",null,null,null,"<a href='https://repositories.oxshef.io' target='_blank'>repositories.oxshef.io<\/a>",null,null,null,null,"<a href='https://tools.oxshef.io' target='_blank'>tools.oxshef.io<\/a>"],"shape":["diamond","dot","dot","square","diamond","dot","dot","square","diamond","dot","dot","dot","dot"],"size":[25,5,5,25,25,5,5,25,25,5,5,25,25],"color":["#97C2FC","green","red","#97C2FC","#97C2FC","red","green","red","#97C2FC","green","red","green","red"]},"edges":{"from":[1,1,3,2,5,5,6,7,9,9,10,11],"to":[2,3,4,5,7,6,8,9,10,11,12,13]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","font":{"size":16}},"manipulation":{"enabled":false},"edges":{"color":"#97C2FC"},"interaction":{"dragNodes":false,"dragView":false,"selectable":false},"layout":{"hierarchical":{"enabled":true,"levelSeparation":180,"blockShifting":false,"edgeMinimization":false,"direction":"LR","sortMethod":"directed"}}},"groups":null,"width":"100%","height":"500px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
 
   </div> <!-- articleBandContent -->
 </div> <!-- pageContent -->

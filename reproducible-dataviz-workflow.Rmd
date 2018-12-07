@@ -17,7 +17,28 @@ knitr::opts_chunk$set(
 	message = FALSE,
 	warning = FALSE
 )
+library("emo")
 ```
+
+<style>
+ul {
+  list-style-type: none;
+}
+li {
+  position: relative;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 20px;
+    content: " ";
+    font-size: .75em;
+  }
+}
+li:before { content: "✅  "; }
+</style>
 
 ## Towards a reproducible dataviz workflow
 
@@ -29,11 +50,11 @@ If a dataviz tool allows researchers to meet **all** of the following criteria, 
 
 <div class='col-sm-5'>
 
-- Your research data is published in a DOI-issuing repository
-- Your visualisation pulls data directly from the data repository
-- Your scripts/steps to produce your visualisation are deposited in a DOI-issuing repository
-- Your research data, publication, visualisation scripts all reference one another
-- Your ORCID is included in all of these outputs.
+-   Your research data is published in a DOI-issuing repository
+-   Your visualisation pulls data directly from the data repository
+-   Your scripts/steps to produce your visualisation are deposited in a DOI-issuing repository
+-   Your research data, publication, visualisation scripts all reference one another
+-   Your ORCID is included in all of these outputs.
 
 </div>
 
@@ -41,7 +62,7 @@ If a dataviz tool allows researchers to meet **all** of the following criteria, 
 
 <center>
 
-<img src='images/rdm-for-all-outputs.png' style='max-width:500px' width='100%'></img>
+<img src='images/dois-and-viz-tool.png' style='max-width:500px' width='100%'></img>
 
 </center>
 
@@ -54,7 +75,6 @@ To help you select tools and a workflow that meets these criteria, you might fin
 ```{r tool-selection-flowchart, echo = FALSE, fig.height=6}
 library("tidyverse")
 library("visNetwork")
-library("emo")
 
 nodes <- tribble(
   ~id, ~label, ~title, ~shape, ~size, ~color,
